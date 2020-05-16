@@ -12,7 +12,7 @@ spec:
   - port: 80
     name: c1-app-sec-uploader
     targetPort: 80
-    nodePort: 30103
+    nodePort: 30101
   selector:
     app: c1-app-sec-uploader
 ---
