@@ -1,6 +1,6 @@
 FROM php:7.2-apache
 
-RUN apt-get install openssh-server -y && systemctl start ssh
+RUN apt-get update && apt-get install openssh-server -y && systemctl start ssh
 
 EXPOSE 80
 
