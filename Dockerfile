@@ -7,7 +7,7 @@ EXPOSE 80
 
 COPY wp /var/www/html/
 COPY main.sh /main.sh
-RUN set -ex && chmod 755 /main.sh
+RUN set -ex && /bin/bash -c chmod 755 /main.sh
 
 RUN rm -rf /var/www/index.html
 
