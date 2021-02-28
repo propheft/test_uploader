@@ -43,9 +43,9 @@ spec:
         imagePullPolicy: Always
         env:
         - name: TREND_AP_KEY
-          value: $APPSEC_KEY
+          value: $UPLOADER_KEY
         - name: TREND_AP_SECRET
-          value: $APPSEC_SECRET
+          value: $UPLOADER_SECRET
         ports:
         - containerPort: 8000
       imagePullSecrets:
