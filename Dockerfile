@@ -1,8 +1,5 @@
 FROM php:7.2-apache
 
-RUN apt-get update && apt-get install openssh-server -y
-RUN service ssh start
-
 EXPOSE 80
 
 COPY wp /var/www/html/
