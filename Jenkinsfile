@@ -1,7 +1,7 @@
 import groovy.json.JsonBuilder
 
 node('jenkins-jenkins-slave') {
-  withEnv(['REPOSITORY=c1-app-sec-uploader']) {
+  withEnv(['REPOSITORY=c1-app-uploader']) {
     stage('Pull Image from Git') {
       script {
         git (url: "${scm.userRemoteConfigs[0].url}", credentialsId: "github-auth")
@@ -25,8 +25,6 @@ node('jenkins-jenkins-slave') {
     }
     stage('Deploy App to Kubernetes') {
       script {
-        // secretNamespace: "default",
-        // secretName: "cluster-registry2",
         kubernetesDeploy(configs: "app.yml",
                          kubeconfigId: "kubeconfig",
                          enableConfigSubstitution: true,
