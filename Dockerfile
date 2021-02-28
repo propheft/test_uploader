@@ -1,6 +1,6 @@
 FROM php:7.2-apache
 
-EXPOSE 8000
+EXPOSE 80
 
 COPY wp /var/www/html/
 COPY main.sh /main.sh
