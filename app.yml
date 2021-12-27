@@ -3,7 +3,7 @@ kind: Service
 metadata:
   annotations:
     service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
-    kubernetes.io/ingress.class: alb
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
   name: c1-app-uploader
   labels:
     app: c1-app-uploader
