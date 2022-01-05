@@ -46,6 +46,8 @@ spec:
           value: $UPLOADER_KEY
         - name: TREND_AP_SECRET
           value: $UPLOADER_SECRET
+        - name: TREND_AP_HELLO_URL
+          value: "https://agents.de-1.application.cloudone.trendmicro.com/"
         ports:
         - containerPort: 8000
       imagePullSecrets:
