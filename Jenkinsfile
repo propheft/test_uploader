@@ -45,7 +45,7 @@ node {
             vulnerabilities: [
               defcon1: 0,
               critical: 50,
-              high: 100,
+              high: 250,
             ],
             contents: [
               defcon1: 0,
