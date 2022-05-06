@@ -9,9 +9,9 @@ metadata:
   name: c1-app-uploader
   labels:
     app: c1-app-uploader
+    name: c1-app-uploader
 spec:
   type: LoadBalancer
-  name: c1-app-uploader
   ports:
   - port: 443
     name: c1-app-uploader
