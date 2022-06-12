@@ -14,7 +14,7 @@ node {
     }
     stage('Push Image to Registry') {
       script {
-        docker.withRegistry("https://${K8S_REGISTRY}", 'ecr:eu-west-1:registry-auth') {
+        docker.withRegistry("https://${K8S_REGISTRY}", 'ecr:us-east-1:registry-auth') {
           dbuild.push('latest')
         }
       }
@@ -25,7 +25,7 @@ node {
                          kubeconfigId: "kubeconfig",
                          enableConfigSubstitution: true,
                          dockerCredentials: [
-                           [credentialsId: "ecr:eu-west-1:registry-auth", url: "${K8S_REGISTRY}"],
+                           [credentialsId: "ecr:us-east-1:registry-auth", url: "${K8S_REGISTRY}"],
                          ])
       }
     }
